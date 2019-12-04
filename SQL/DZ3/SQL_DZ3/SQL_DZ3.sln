@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQL_DZ3", "SQL_DZ3\SQL_DZ3.sqlproj", "{34A75875-03C6-428A-BD3E-CE3713FE97C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34A75875-03C6-428A-BD3E-CE3713FE97C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A75875-03C6-428A-BD3E-CE3713FE97C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A75875-03C6-428A-BD3E-CE3713FE97C5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{34A75875-03C6-428A-BD3E-CE3713FE97C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A75875-03C6-428A-BD3E-CE3713FE97C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34A75875-03C6-428A-BD3E-CE3713FE97C5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B01F8E8C-1034-40FC-BD3F-8957E4C34D10}
+	EndGlobalSection
+EndGlobal
