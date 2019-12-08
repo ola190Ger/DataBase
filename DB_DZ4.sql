@@ -66,7 +66,10 @@ LecturedId int not null references Lectures(Id)
 
 use DZ4
 --1. Вывести все возможные пары строк преподавателей и групп.
---what to do?
+
+Select Teachers.Name, Groups.Name
+from Teachers
+cross join Groups
 
 --2. Вывести названия факультетов, фонд финансирования
 --кафедр которых превышает фонд финансирования факультета.
