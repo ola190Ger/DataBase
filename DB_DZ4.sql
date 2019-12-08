@@ -106,6 +106,72 @@ from GroupseCurators
   join Departments on DepartmentId=Departments.Id
   join Faculties on FacultyId=Faculties.Id
 
+--6. Вывести названия кафедр и названия групп, которые к
+--ним относятся.
+use DZ4
+Select 
+Faculties.Name as Faculti,
+Groups.Name as Groups
+from Faculties
+full join Departments on Departments.Id=Faculties.Id
+full join Groups on Groups.Id=Departments.Id
+
+--7. Вывести названия дисциплин, которые читает преподаватель “Samantha Adams”. Emily Mitchell
+Select Subjects.Name, Teachers.Name, Teachers.Surname
+from Lectures 
+join Subjects on SubjectId=Subjects.Id
+join Teachers on TeacherId=Teachers.Id
+where Teachers.Name='Emily' and Teachers.Surname='Mitchell'
+
+--8. Вывести названия кафедр, на которых читается дисциплина
+--“Database Theory”. YCXP==>BAQZFUGUVPGITYLBNNWKAPPHVBUNXQWWSCPDBEZIMJNNOLKLITBDVUEAFDYEYDYBZGIORMLL
+select Departments.Name
+from GroupsLectures
+join Lectures on LecturedId=Lectures.Id
+join Subjects on SubjectId=Subjects.Id
+join Groups on GroupId=Groups.Id
+join Departments on DepartmentId=Departments.Id
+where Subjects.Name='YCXP'
+
+--9. Вывести названия групп, которые относятся к факультету
+--“Computer Science”. AVFFM==>IUPQQD
+select Faculties.Name as Facultet,
+		Groups.Name as Groups
+from Faculties
+join Departments on Faculties.Id=FacultyId
+join Groups on Departments.Id=DepartmentId
+--order by Faculties.Name
+where Faculties.Name='AVFFM'
+
+--10. Вывести названия групп 5-го курса, а также название факультетов, к которым они относятся.
+select Groups.Name as 'Group',
+		Faculties.Name as Facultet
+from Groups
+join Departments on DepartmentId=Departments.Id
+join Faculties on FacultyId=Faculties.Id
+where Groups.Year=5
+order by Groups.Name
+
+--11. Вывести полные имена преподавателей и лекции, которые
+--они читают (названия дисциплин и групп), причем отобрать
+--только те лекции, которые читаются в аудитории “B103”. 
+--Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+Select 
+Teachers.Name+' '+Teachers.Surname as Teacher,
+LectureRoom as Room,
+Subjects.Name as 'Subject',
+Groups.Name as 'Groups'
+from GroupsLectures
+join Lectures on LecturedId=Lectures.Id
+join Subjects on SubjectId=Subjects.Id
+join Teachers on TeacherId=Teachers.Id
+join Groups on GroupId=Groups.Id
+--order by LectureRoom
+where LectureRoom='Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
+
+
+
 
 
 
