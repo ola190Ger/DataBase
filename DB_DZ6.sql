@@ -72,3 +72,48 @@ Id int identity not null primary key,
 GroupId int not null references Groups(Id),
 StudentId int not null references Students(Id)
 )
+
+--1. Вывести номера корпусов, если суммарный фонд финансирования расположенных в них кафедр превышает 100000000000000.
+--МОЖЛИВО НЕОБХІДНО ВИВЕСТИ НАЗВУ ФАКУЛЬТЕТУ...ІМ'Я КАФЕДРИ УНИКАЛЬНЕ , НЕ МОЖЛИВО ПОРАХУВАТИ СУМИ
+
+select Faculties.Name, Sum(Finansing) as FacultiFinance
+from Faculties
+join Departmens on Faculties.Id=FacultiID
+group by Faculties.Name
+having SUM(Finansing)>100000000000000
+
+--2. Вывести названия групп 5-го курса кафедры “Software
+--Development”, которые имеют более 10 пар в первую неделю.
+
+--==WHAT======WERE IS SCHEDULE================================================
+
+--3. Вывести названия групп, имеющих рейтинг (средний рейтинг всех студентов группы) больше, чем рейтинг группы
+--“D221”."DOIGIRGW"==>>rating>3
+
+SELECT Groups.Name, sum(Rating) as GroupRating 
+from GroupStudents
+join Groups on GroupId=Groups.Id
+join Students on StudentId=Students.Id
+Group by Groups.Name 
+having sum(Rating)>(select sum(Rating)
+					from GroupStudents
+					join Groups on GroupId=Groups.Id
+					join Students on StudentId=Students.Id
+					where Groups.Name='DOIGIRGW')
+-- how make easer===========================================
+
+--4. Вывести фамилии и имена преподавателей, ставка которых
+--выше средней ставки профессоров.
+
+
+
+--5. Вывести названия групп, у которых больше одного куратора.
+--6. Вывести названия групп, имеющих рейтинг (средний рейтинг всех студентов группы) меньше, чем минимальный
+--рейтинг групп 5-го курса.
+--7. Вывести названия факультетов, суммарный фонд финансирования кафедр которых больше суммарного фонда
+--финансирования кафедр факультета “Computer Science”.
+--8. Вывести названия дисциплин и полные имена преподавателей, читающих наибольшее количество лекций по ним.
+--9. Вывести название дисциплины, по которому читается
+--меньше всего лекций.
+--10. Вывести количество студентов и читаемых дисциплин на
+--кафедре “Software Development”.
