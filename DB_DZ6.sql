@@ -1,6 +1,6 @@
-create database DZ62
+create database DZ63
 
-use DZ62
+use DZ63
 
 create table Curators
 (
@@ -50,6 +50,7 @@ Surname nvarchar(max) not null check(Surname!='')
 
 create table Lectures(
 Id int identity not null primary key,
+Date date not null check(Date< getdate() ),
 SubjectId int not null references Subjects(Id),
 TeacherId int not null references Teachers(Id)
 )
@@ -74,18 +75,32 @@ StudentId int not null references Students(Id)
 )
 
 --1. Вывести номера корпусов, если суммарный фонд финансирования расположенных в них кафедр превышает 100000000000000.
---МОЖЛИВО НЕОБХІДНО ВИВЕСТИ НАЗВУ ФАКУЛЬТЕТУ...ІМ'Я КАФЕДРИ УНИКАЛЬНЕ , НЕ МОЖЛИВО ПОРАХУВАТИ СУМИ
+select Departmens.Building, sum(cast(Departmens.Finansing as decimal)) as Summ from Departmens
+group by Departmens.Building
+having sum(cast(Departmens.Finansing as decimal)) > 1496159802654852
 
-select Faculties.Name, Sum(Finansing) as FacultiFinance
-from Faculties
-join Departmens on Faculties.Id=FacultiID
-group by Faculties.Name
-having SUM(Finansing)>100000000000000
+
+
+----МОЖЛИВО НЕОБХІДНО ВИВЕСТИ НАЗВУ ФАКУЛЬТЕТУ
+
+--select Faculties.Name, Sum(Finansing) as FacultiFinance
+--from Faculties
+--join Departmens on Faculties.Id=FacultiID
+--group by Faculties.Name
+--having SUM(Finansing)>100000000000000
 
 --2. Вывести названия групп 5-го курса кафедры “Software
 --Development”, которые имеют более 10 пар в первую неделю.
 
---==WHAT======WERE IS SCHEDULE================================================
+Declare @firstdate date --First day at 5years
+set @firstdate=(select min(Date) from Groups join GroupsLectures on GroupId=Groups.Id  and Groups.Year=5
+				join Lectures on LecturedId=Lectures.Id);
+select Groups.Name
+from Groups join Departmens on DepartmentId=Departmens.Id and Departmens.Name like '%D%'
+	join GroupsLectures on GroupId=Groups.Id 
+	join Lectures on LecturedId=Lectures.Id
+where Lectures.Date between @firstdate and dateadd(DAY,7,@firstdate)
+
 
 --3. Вывести названия групп, имеющих рейтинг (средний рейтинг всех студентов группы) больше, чем рейтинг группы
 --“D221”."DOIGIRGW"==>>rating>3
@@ -99,17 +114,42 @@ having sum(Rating)>(select sum(Rating)
 					from GroupStudents
 					join Groups on GroupId=Groups.Id
 					join Students on StudentId=Students.Id
-					where Groups.Name='DOIGIRGW')
+					where Groups.Name like 'AFCQBP')
+-- rating 'AFCQBP'=3
 -- how make easer===========================================
 
 --4. Вывести фамилии и имена преподавателей, ставка которых
 --выше средней ставки профессоров.
 
-
+Select Concat(Teachers.Name,' ',Teachers.Surname) as Teacher, Salary
+from Teachers where Salary>(select Avg(Cast(Salary as decimal)) from Teachers where IsProfessor=1)
+-- avg salary proff=52037876335410
 
 --5. Вывести названия групп, у которых больше одного куратора.
---6. Вывести названия групп, имеющих рейтинг (средний рейтинг всех студентов группы) меньше, чем минимальный
+
+select count(CuratorId) as CountCurators, Groups.Name as GroupName
+from GroupsCurators join Groups on GroupId=Groups.Id
+group by Groups.Name
+having count(CuratorId)>1
+
+--6. Вывести названия групп, имеющих рейтинг 
+--(средний рейтинг всех студентов группы) меньше, чем минимальный
 --рейтинг групп 5-го курса.
+declare @reting5yearsgroup int,
+		@GroupName nvarchar(30)
+
+SELECT Groups.Name as na, sum(Rating) as ss --@GroupName=Groups.Name, @reting5yearsgroup=sum(Rating) 
+from  GroupStudents
+join Groups on GroupId=Groups.Id --and Groups.Year=5
+join Students on StudentId=Students.Id  
+Group by Groups.Name 
+--if @reting5yearsgroup<
+having sum(Rating)< (select min( sum(Rating))
+					from (GroupStudents join Groups on GroupId=Groups.Id
+					join Students on StudentId=Students.Id)
+					where Groups.Year=5)
+
+
 --7. Вывести названия факультетов, суммарный фонд финансирования кафедр которых больше суммарного фонда
 --финансирования кафедр факультета “Computer Science”.
 --8. Вывести названия дисциплин и полные имена преподавателей, читающих наибольшее количество лекций по ним.
