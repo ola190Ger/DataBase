@@ -135,19 +135,18 @@ having count(CuratorId)>1
 --6. Вывести названия групп, имеющих рейтинг 
 --(средний рейтинг всех студентов группы) меньше, чем минимальный
 --рейтинг групп 5-го курса.
-declare @reting5yearsgroup int,
-		@GroupName nvarchar(30)
-
-SELECT Groups.Name as na, sum(Rating) as ss --@GroupName=Groups.Name, @reting5yearsgroup=sum(Rating) 
-from  GroupStudents
-join Groups on GroupId=Groups.Id --and Groups.Year=5
-join Students on StudentId=Students.Id  
-Group by Groups.Name 
---if @reting5yearsgroup<
-having sum(Rating)< (select min( sum(Rating))
+declare @reting5yearsgroup int
+set  @reting5yearsgroup=(select top 1 sum(Rating)
 					from (GroupStudents join Groups on GroupId=Groups.Id
 					join Students on StudentId=Students.Id)
-					where Groups.Year=5)
+					where Groups.Year=5
+					order by SUM(Rating))
+SELECT Groups.Name as na, sum(Rating) as ss
+from  GroupStudents
+join Groups on GroupId=Groups.Id 
+join Students on StudentId=Students.Id
+Group by Groups.Name  
+having sum(Rating)<@reting5yearsgroup
 
 
 --7. Вывести названия факультетов, суммарный фонд финансирования кафедр которых больше суммарного фонда
