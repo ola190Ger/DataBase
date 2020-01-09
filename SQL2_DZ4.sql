@@ -1,8 +1,8 @@
---Çàäàíèå 1. Äëÿ áàçû äàííûõ «Ñïîðòèâíûé ìàãàçèí» èç
---ïðàêòè÷åñêîãî çàäàíèÿ ìîäóëÿ «Òðèããåðû, õðàíèìûå ïðîöåäóðû è ïîëüçîâàòåëüñêèå ôóíêöèè» ñîçäàéòå ñëåäóþùèå
---ïîëüçîâàòåëüñêèå ôóíêöèè:
+--Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ 1. Ð”Ð»Ñ Ð±Ð°Ð·Ñ‹ Ð´Ð°Ð½Ð½Ñ‹Ñ… Â«Ð¡Ð¿Ð¾Ñ€Ñ‚Ð¸Ð²Ð½Ñ‹Ð¹ Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½Â» Ð¸Ð·
+--Ð¿Ñ€Ð°ÐºÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ Ð·Ð°Ð´Ð°Ð½Ð¸Ñ Ð¼Ð¾Ð´ÑƒÐ»Ñ Â«Ð¢Ñ€Ð¸Ð³Ð³ÐµÑ€Ñ‹, Ñ…Ñ€Ð°Ð½Ð¸Ð¼Ñ‹Ðµ Ð¿Ñ€Ð¾Ñ†ÐµÐ´ÑƒÑ€Ñ‹ Ð¸ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ¸Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸Â» ÑÐ¾Ð·Ð´Ð°Ð¹Ñ‚Ðµ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ
+--Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ¸Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸:
 use SportShop
---1. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò êîëè÷åñòâî óíèêàëüíûõ ïîêóïàòåëåé
+--1. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑƒÐ½Ð¸ÐºÐ°Ð»ÑŒÐ½Ñ‹Ñ… Ð¿Ð¾ÐºÑƒÐ¿Ð°Ñ‚ÐµÐ»ÐµÐ¹
 go
 create function FU_CountUniqueName()
 returns int
@@ -18,8 +18,8 @@ end;
 go
 
 print dbo.FU_CountUniqueName()
---2. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò ñðåäíþþ öåíó òîâàðà êîíêðåòíîãî âèäà. Âèä òîâàðà ïåðåäà¸òñÿ â êà÷åñòâå
---ïàðàìåòðà. Íàïðèìåð, ñðåäíþþ öåíó îáóâè
+--2. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÑÑ€ÐµÐ´Ð½ÑŽÑŽ Ñ†ÐµÐ½Ñƒ Ñ‚Ð¾Ð²Ð°Ñ€Ð° ÐºÐ¾Ð½ÐºÑ€ÐµÑ‚Ð½Ð¾Ð³Ð¾ Ð²Ð¸Ð´Ð°. Ð’Ð¸Ð´ Ñ‚Ð¾Ð²Ð°Ñ€Ð° Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‘Ñ‚ÑÑ Ð² ÐºÐ°Ñ‡ÐµÑÑ‚Ð²Ðµ
+--Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°. ÐÐ°Ð¿Ñ€Ð¸Ð¼ÐµÑ€, ÑÑ€ÐµÐ´Ð½ÑŽÑŽ Ñ†ÐµÐ½Ñƒ Ð¾Ð±ÑƒÐ²Ð¸
 go
 create function FN_AVGPrice(@kind nvarchar(max))
 returns dec(16,2)
@@ -33,8 +33,8 @@ go
 
 print dbo.FN_AVGPrice('55')
 go 
---3. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò ñðåäíþþ öåíó
---ïðîäàæè ïî êàæäîé äàòå, êîãäà îñóùåñòâëÿëèñü ïðîäàæè
+--3. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÑÑ€ÐµÐ´Ð½ÑŽÑŽ Ñ†ÐµÐ½Ñƒ
+--Ð¿Ñ€Ð¾Ð´Ð°Ð¶Ð¸ Ð¿Ð¾ ÐºÐ°Ð¶Ð´Ð¾Ð¹ Ð´Ð°Ñ‚Ðµ, ÐºÐ¾Ð³Ð´Ð° Ð¾ÑÑƒÑ‰ÐµÑÑ‚Ð²Ð»ÑÐ»Ð¸ÑÑŒ Ð¿Ñ€Ð¾Ð´Ð°Ð¶Ð¸
 create function FN_AVGPriceSells(@dateSell date)
 returns dec(16,2)
 as
@@ -46,8 +46,8 @@ end;
 go
 
 print dbo.FN_AVGPriceSells('2020-01-05')
---4. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò èíôîðìàöèþ î ïîñëåäíåì ïðîäàííîì òîâàðå. 
---Êðèòåðèé îïðåäåëåíèÿ ïîñëåäíåãî ïðîäàííîãî òîâàðà: äàòà ïðîäàæè
+--4. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÐµÐ¼ Ð¿Ñ€Ð¾Ð´Ð°Ð½Ð½Ð¾Ð¼ Ñ‚Ð¾Ð²Ð°Ñ€Ðµ. 
+--ÐšÑ€Ð¸Ñ‚ÐµÑ€Ð¸Ð¹ Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ñ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÐµÐ³Ð¾ Ð¿Ñ€Ð¾Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ñ‚Ð¾Ð²Ð°Ñ€Ð°: Ð´Ð°Ñ‚Ð° Ð¿Ñ€Ð¾Ð´Ð°Ð¶Ð¸
 
 go
 create function FN_LastSellGood()
@@ -69,8 +69,8 @@ end;
 go
 
 select * from FN_LastSellGood()
---5. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò èíôîðìàöèþ î ïåðâîì ïðîäàííîì òîâàðå. Êðèòåðèé îïðåäåëåíèÿ ïåðâîãî
---ïðîäàííîãî òîâàðà: äàòà ïðîäàæè
+--5. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ Ð¿ÐµÑ€Ð²Ð¾Ð¼ Ð¿Ñ€Ð¾Ð´Ð°Ð½Ð½Ð¾Ð¼ Ñ‚Ð¾Ð²Ð°Ñ€Ðµ. ÐšÑ€Ð¸Ñ‚ÐµÑ€Ð¸Ð¹ Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ñ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾
+--Ð¿Ñ€Ð¾Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ñ‚Ð¾Ð²Ð°Ñ€Ð°: Ð´Ð°Ñ‚Ð° Ð¿Ñ€Ð¾Ð´Ð°Ð¶Ð¸
 go
 create function FN_FirstSellGood()
 returns @firstSell table (
@@ -91,9 +91,9 @@ end;
 go
 
 select * from FN_FirstSellGood()
---6. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò èíôîðìàöèþ î çàäàííîì âèäå òîâàðîâ êîíêðåòíîãî ïðîèçâîäèòåëÿ. Âèä
---òîâàðà è íàçâàíèå ïðîèçâîäèòåëÿ ïåðåäàþòñÿ â êà÷åñòâå
---ïàðàìåòðîâ
+--6. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¼ Ð²Ð¸Ð´Ðµ Ñ‚Ð¾Ð²Ð°Ñ€Ð¾Ð² ÐºÐ¾Ð½ÐºÑ€ÐµÑ‚Ð½Ð¾Ð³Ð¾ Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ñ. Ð’Ð¸Ð´
+--Ñ‚Ð¾Ð²Ð°Ñ€Ð° Ð¸ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ñ Ð¿ÐµÑ€ÐµÐ´Ð°ÑŽÑ‚ÑÑ Ð² ÐºÐ°Ñ‡ÐµÑÑ‚Ð²Ðµ
+--Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð¾Ð²
 go
 create function FN_GoodInfo(@kind nvarchar(max), @manuf nvarchar(max))
 returns @tmptable table (
@@ -116,7 +116,7 @@ go
 
 select * from FN_GoodInfo('Kind1', 'Manuf1')
 
---7. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò èíôîðìàöèþ î ïîêóïàòåëÿõ, êîòîðûì â ýòîì ãîäó èñïîëíèòñÿ 45 ëåò
+--7. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ Ð¿Ð¾ÐºÑƒÐ¿Ð°Ñ‚ÐµÐ»ÑÑ…, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¼ Ð² ÑÑ‚Ð¾Ð¼ Ð³Ð¾Ð´Ñƒ Ð¸ÑÐ¿Ð¾Ð»Ð½Ð¸Ñ‚ÑÑ 45 Ð»ÐµÑ‚
 
 alter table dbo.Clients
 add BirthDay date null
@@ -148,20 +148,153 @@ end;
 
 select * from FN_ClientInfo(45)
 
---Çàäàíèå 2. Äëÿ áàçû äàííûõ «Ìóçûêàëüíàÿ êîëëåêöèÿ» èç
---ïðàêòè÷åñêîãî çàäàíèÿ ìîäóëÿ «Ðàáîòà ñ òàáëèöàìè è ïðåäñòàâëåíèÿìè â MS SQL Server» ñîçäàéòå ñëåäóþùèå ïîëüçîâàòåëüñêèå ôóíêöèè:
---1. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò âñå äèñêè çàäàííîãî
---ãîäà. Ãîä ïåðåäà¸òñÿ â êà÷åñòâå ïàðàìåòðà
---2. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò èíôîðìàöèþ
---î äèñêàõ ñ îäèíàêîâûì íàçâàíèåì àëüáîìà, íî ðàçíûìè
---èñïîëíèòåëÿìè
---3. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò èíôîðìàöèþ î âñåõ
---ïåñíÿõ â ÷üåì íàçâàíèè âñòðå÷àåòñÿ çàäàííîå ñëîâî. Ñëîâî
---ïåðåäà¸òñÿ â êà÷åñòâå ïàðàìåòðà
---4. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò êîëè÷åñòâî àëüáîìîâ â ñòèëÿõ hard rock è heavy metal
---5. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò èíôîðìàöèþ î ñðåäíåé äëèòåëüíîñòè ïåñíè çàäàííîãî èñïîëíèòåëÿ. Íàçâàíèå
---èñïîëíèòåëÿ ïåðåäà¸òñÿ â êà÷åñòâå ïàðàìåòðà
---6. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò èíôîðìàöèþ î ñàìîé äîëãîé è ñàìîé êîðîòêîé ïåñíå
---7. Ïîëüçîâàòåëüñêàÿ ôóíêöèÿ âîçâðàùàåò èíôîðìàöèþ îá
---èñïîëíèòåëÿõ, êîòîðûå ñîçäàëè àëüáîìû â äâóõ è áîëåå
---ñòèëÿõ.
+--Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ 2. Ð”Ð»Ñ Ð±Ð°Ð·Ñ‹ Ð´Ð°Ð½Ð½Ñ‹Ñ… Â«ÐœÑƒÐ·Ñ‹ÐºÐ°Ð»ÑŒÐ½Ð°Ñ ÐºÐ¾Ð»Ð»ÐµÐºÑ†Ð¸ÑÂ» Ð¸Ð·
+--Ð¿Ñ€Ð°ÐºÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ Ð·Ð°Ð´Ð°Ð½Ð¸Ñ Ð¼Ð¾Ð´ÑƒÐ»Ñ Â«Ð Ð°Ð±Ð¾Ñ‚Ð° Ñ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð°Ð¼Ð¸ Ð¸ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸ÑÐ¼Ð¸ Ð² MS SQL ServerÂ» ÑÐ¾Ð·Ð´Ð°Ð¹Ñ‚Ðµ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ¸Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸:
+use MusicCollection
+go
+																	  
+--1. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð²ÑÐµ Ð´Ð¸ÑÐºÐ¸ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾
+--Ð³Ð¾Ð´Ð°. Ð“Ð¾Ð´ Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‘Ñ‚ÑÑ Ð² ÐºÐ°Ñ‡ÐµÑÑ‚Ð²Ðµ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°
+
+create function FN_DiscInYear(@year int)
+returns @discInfo table(
+Name nvarchar(max) not null,
+Review nvarchar(max) not null,
+ReleaseDate date not null
+)
+as
+begin
+insert into @discInfo (Name, Review, ReleaseDate)
+select Name, Review, ReleaseDate from Discs where Year(ReleaseDate)=@year
+return
+end;
+
+select * from FN_DiscInYear(2019)
+--2. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ
+--Ð¾ Ð´Ð¸ÑÐºÐ°Ñ… Ñ Ð¾Ð´Ð¸Ð½Ð°ÐºÐ¾Ð²Ñ‹Ð¼ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸ÐµÐ¼ Ð°Ð»ÑŒÐ±Ð¾Ð¼Ð°, Ð½Ð¾ Ñ€Ð°Ð·Ð½Ñ‹Ð¼Ð¸
+--Ð¸ÑÐ¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑÐ¼Ð¸
+go
+create function FN_NoUniqueDiscs()
+returns @DInfo table(
+Discs nvarchar(max) not null,
+Artist nvarchar(max) not null,
+CountArtist int not null,
+ReleaseDate date not null,
+Review nvarchar(max) not null
+)
+as
+begin
+
+declare @tmptable table(
+CountArtist int not null, 
+DiscName nvarchar(max) not null
+)
+--alter table [Discs] 
+--drop constraint  UQ__Discs__737584F6526C4B5D
+
+insert into @tmptable (CountArtist, DiscName)
+select count(Artists.Name) , Discs.Name from Discs, Artists where ArtistId=Artists.Id group by Discs.Name
+
+insert into @DInfo (Discs, Artist, CountArtist, ReleaseDate, Review)
+select Discs.Name as Disc, Artists.Name as Artist, CountArtist, ReleaseDate, Review from Discs, Artists, @tmptable where ArtistId=Artists.Id
+		and Discs.Name=DiscName and CountArtist>1 order by Disc
+
+return
+end;
+
+select * from FN_NoUniqueDiscs()
+
+--3. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ Ð²ÑÐµÑ…
+--Ð¿ÐµÑÐ½ÑÑ… Ð² Ñ‡ÑŒÐµÐ¼ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ð¸ Ð²ÑÑ‚Ñ€ÐµÑ‡Ð°ÐµÑ‚ÑÑ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ðµ ÑÐ»Ð¾Ð²Ð¾. Ð¡Ð»Ð¾Ð²Ð¾
+--Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‘Ñ‚ÑÑ Ð² ÐºÐ°Ñ‡ÐµÑÑ‚Ð²Ðµ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°
+																	  
+create function FN_SongWord(@slovo nvarchar(max))
+returns @SongInfo table (
+Name nvarchar(max) not null, 
+Duration int not null
+)
+as
+begin
+--declare @slovo
+insert into @SongInfo(Name, Duration) 
+select Name, Duration from Songs where Songs.Name like CONCAT('%',@slovo,'%')
+return
+end;
+
+select * from FN_SongWord('SS')
+--4. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð°Ð»ÑŒÐ±Ð¾Ð¼Ð¾Ð² Ð² ÑÑ‚Ð¸Ð»ÑÑ…  rock Ð¸  metal
+go
+create function FN_SongStyle()
+returns @SongInfo table (
+SongName nvarchar(max) not null, 
+Duration int not null,
+Style nvarchar(max) not null 
+)
+as
+begin
+insert into @SongInfo(SongName, Duration, Style) 
+select Songs.Name, Duration, Styles.Name from Songs, Styles where StyleId=Styles.Id and Styles.Name='rock' or Styles.Name='metal'
+return
+end;
+
+select * from FN_SongStyle()
+
+--5. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ ÑÑ€ÐµÐ´Ð½ÐµÐ¹ Ð´Ð»Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸ Ð¿ÐµÑÐ½Ð¸ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð³Ð¾ Ð¸ÑÐ¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»Ñ. 
+--ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¸ÑÐ¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»Ñ Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‘Ñ‚ÑÑ Ð² ÐºÐ°Ñ‡ÐµÑÑ‚Ð²Ðµ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°
+go
+create function FN_AvgLongSong(@artist nvarchar(max))
+returns int
+as
+begin 
+declare @rezult int
+set @rezult=(select AVG(Duration) from Songs, Artists where ArtistId=Artists.Id and Artists.Name=@artist)
+return @rezult
+end;
+
+
+print Concat('AVG duration: ', dbo.FN_AvgLongSong('The Beatles'))
+--6. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾ ÑÐ°Ð¼Ð¾Ð¹ Ð´Ð¾Ð»Ð³Ð¾Ð¹ Ð¸ ÑÐ°Ð¼Ð¾Ð¹ ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¾Ð¹ Ð¿ÐµÑÐ½Ðµ
+go
+create function FN_MinMaxDuration()
+returns @Long table(
+Duration int not null,
+Songs nvarchar(max) not null)
+as
+begin
+insert into @Long(Duration, Songs)
+select Duration, Name from Songs where Duration=(Select MAX(Duration)from Songs) or Duration=(Select MIN(Duration)from Songs)
+
+return
+end;
+
+select* from FN_MinMaxDuration()
+--7. ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ°Ñ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¾Ð±
+--Ð¸ÑÐ¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑÑ…, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ ÑÐ¾Ð·Ð´Ð°Ð»Ð¸ Ð°Ð»ÑŒÐ±Ð¾Ð¼Ñ‹ Ð² Ð´Ð²ÑƒÑ… Ð¸ Ð±Ð¾Ð»ÐµÐµ
+--ÑÑ‚Ð¸Ð»ÑÑ….
+go
+create function FN_NoUniqueStyle()
+returns @AInfo table(
+Discs nvarchar(max) not null,
+Artist nvarchar(max) not null,
+CountStyle int not null
+)
+as
+begin
+
+declare @tmptable table(
+CountStyle int not null, 
+Artist nvarchar(max) not null
+)
+
+insert into @tmptable (CountStyle, Artist)
+select count(Styles.Name) , Artists.Name from Discs, Artists,Styles 
+	where ArtistId=Artists.Id and StyleId=Styles.Id group by Artists.Name
+
+insert into @AInfo (Discs, Artist, CountStyle)
+select Discs.Name as Disc, Artists.Name as Artist, CountStyle from Discs, Artists, @tmptable 
+		where Discs.ArtistId=Artists.Id and Artist=Artists.Name and CountStyle>1 order by Disc
+
+return
+end;
+
+select * from FN_NoUniqueStyle()
